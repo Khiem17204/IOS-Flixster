@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2UxNjQxNWJhYTZiMDFjMTc0MzEwZWFmZDQ1NDkyMWQ4ZDkwMDQ5MSZjdD1n/WzpNx2DlSoTKDKajTO/giphy.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2UxNjQxNWJhYTZiMDFjMTc0MzEwZWFmZDQ1NDkyMWQ4ZDkwMDQ5MSZjdD1n/WzpNx2DlSoTKDKajTO/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## License
