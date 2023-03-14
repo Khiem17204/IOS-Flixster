@@ -1,36 +1,29 @@
-# Project 2 - *Flixster*
+# Project 3 - *Flixster*
 
 Submitted by: **Khiem Le**
 
-**Flixster** is a movie browsing app that display information about movies. 
+**Flixster** is an app that introduces networking into building IOS app, I am using MovieDb API to display information and poster of showing movies. 
 
-Time spent: **5** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] Users are able to see a customized app icon and launch screen
-- [x] Your app should work for any screen size and orientation using AutoLayout constraints
-- [x] Mark here if you will demostrate auto layout implemention as horizontal rotation or different phone size or both, then erase this text
-- [x] Displays at least 5 different movies in a table view
-- [x] Can tap into detail view of movie with a full description, backdrop image, and title
+- [x] Implement network call and table view to display a list of movies currently playing (title, description, image)
+- [x] App has a collection view with the same list of movies
+- [x] Uses a tab bar controller to switch between collection view and table view screens
  
 The following **optional** features are implemented:
 
-- [ ] Unique UI changes, such as background, font/color changes, etc.
-- [ ] User implements a collection view
-- [ ] User implemenets tab bar controller with at least two screens
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] Make an additional network call to another end-point.	
+- [x] Allow users to scroll when context items are off-screen (table view implemention)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2UxNjQxNWJhYTZiMDFjMTc0MzEwZWFmZDQ1NDkyMWQ4ZDkwMDQ5MSZjdD1n/WzpNx2DlSoTKDKajTO/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGMxY2UyMTllMmE1ZTllYzBlMmYxYzdkYmZjOWFlYTEwMzMwMDYzNiZjdD1n/zO0BzTJMPDLsjmDrUc/giphy-downsized-large.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## License
