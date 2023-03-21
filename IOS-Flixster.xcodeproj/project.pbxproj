@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162E676329C968B8003290F2 /* RelatedPostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162E676229C968B8003290F2 /* RelatedPostersViewController.swift */; };
+		162E676529C976C2003290F2 /* RelatedPosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162E676429C976C2003290F2 /* RelatedPosterCell.swift */; };
+		16434E2A29C03FB400AFE555 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16434E2929C03FB400AFE555 /* PosterViewController.swift */; };
+		16434E2C29C041C200AFE555 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16434E2B29C041C200AFE555 /* PosterCell.swift */; };
 		16EC247A29B2FD1000D9C90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC247929B2FD1000D9C90A /* AppDelegate.swift */; };
 		16EC247C29B2FD1000D9C90A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC247B29B2FD1000D9C90A /* SceneDelegate.swift */; };
 		16EC247E29B2FD1000D9C90A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC247D29B2FD1000D9C90A /* ViewController.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		162E676229C968B8003290F2 /* RelatedPostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedPostersViewController.swift; sourceTree = "<group>"; };
+		162E676429C976C2003290F2 /* RelatedPosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedPosterCell.swift; sourceTree = "<group>"; };
+		16434E2929C03FB400AFE555 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		16434E2B29C041C200AFE555 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		16EC247629B2FD1000D9C90A /* IOS-Flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Flixster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EC247929B2FD1000D9C90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16EC247B29B2FD1000D9C90A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +76,12 @@
 				16EC247929B2FD1000D9C90A /* AppDelegate.swift */,
 				16EC247B29B2FD1000D9C90A /* SceneDelegate.swift */,
 				16EC249729B3EDB000D9C90A /* DetailViewController.swift */,
+				16434E2929C03FB400AFE555 /* PosterViewController.swift */,
 				16EC247D29B2FD1000D9C90A /* ViewController.swift */,
 				16EC249529B30DB700D9C90A /* MovieCell.swift */,
+				162E676229C968B8003290F2 /* RelatedPostersViewController.swift */,
+				162E676429C976C2003290F2 /* RelatedPosterCell.swift */,
+				16434E2B29C041C200AFE555 /* PosterCell.swift */,
 				16EC247F29B2FD1000D9C90A /* Main.storyboard */,
 				16EC248229B2FD1100D9C90A /* Assets.xcassets */,
 				16EC248429B2FD1100D9C90A /* LaunchScreen.storyboard */,
@@ -163,10 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162E676529C976C2003290F2 /* RelatedPosterCell.swift in Sources */,
+				16434E2C29C041C200AFE555 /* PosterCell.swift in Sources */,
+				16434E2A29C03FB400AFE555 /* PosterViewController.swift in Sources */,
 				16EC247E29B2FD1000D9C90A /* ViewController.swift in Sources */,
 				16EC247A29B2FD1000D9C90A /* AppDelegate.swift in Sources */,
 				16EC249429B3025D00D9C90A /* Movie.swift in Sources */,
 				16EC249829B3EDB000D9C90A /* DetailViewController.swift in Sources */,
+				162E676329C968B8003290F2 /* RelatedPostersViewController.swift in Sources */,
 				16EC249629B30DB700D9C90A /* MovieCell.swift in Sources */,
 				16EC247C29B2FD1000D9C90A /* SceneDelegate.swift in Sources */,
 			);
@@ -315,6 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FV74JVV3CP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IOS-Flixster/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,6 +339,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FV74JVV3CP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IOS-Flixster/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -349,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

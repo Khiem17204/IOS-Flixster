@@ -1,24 +1,37 @@
 //
-//  ViewController.swift
+//  PosterViewController.swift
 //  IOS-Flixster
 //
-//  Created by Khiem Tran Le on 3/3/23.
+//  Created by Khiem Tran Le on 3/14/23.
 //
 
 import UIKit
+import Nuke
 
-class ViewController: UIViewController, UITableViewDataSource {
+
+class PosterViewController: UIViewController, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
+        
+        let poster = movies[indexPath.item]
+        let imageUrl = poster.poster_path
+        Nuke.loadImage(with: URL(string: "https://image.tmdb.org/t/p/original"+imageUrl)!, into: cell.PosterImage)
+        return cell
+    }
     
-    var movies : [Movie] = []
-    
-    
-    @IBOutlet weak var tableView: UITableView!
+
+    var movies: [Movie] = []
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        
+        // Do any additional setup after loading the view.
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=65af6953156df17c53236157238cd675")!
         let request = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: request){ [weak self] data, response, error in
@@ -49,7 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                         self?.movies = movies
 
                         // Make the table view reload now that we have new data
-                        self?.tableView.reloadData()
+                        self?.collectionView.reloadData()
                     }
                     print("✅ \(movies)")
                 } catch {
@@ -58,41 +71,40 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         task.resume()
 
-        tableView.dataSource = self
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        let movie = movies[indexPath.row]
-        cell.configure(with: movie)
-        return cell
+        collectionView.dataSource = self
+        
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 16
+        let numberOfColumns: CGFloat = 3
+        let width = (collectionView.bounds.width - layout.minimumInteritemSpacing * (numberOfColumns - 1)) / numberOfColumns
+        layout.itemSize = CGSize(width: width, height: width*3/2)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let cell = sender as? UITableViewCell,
+        if let cell = sender as? UICollectionViewCell,
            // Get the index path of the cell from the table view
-           let indexPath = tableView.indexPath(for: cell),
+           let indexPath = collectionView.indexPath(for: cell),
            // Get the detail view controller
            let detailViewController = segue.destination as? DetailViewController {
             
             // Use the index path to get the associated track
-            let movie = movies[indexPath.row]
+            let movie = movies[indexPath.item]
             
             // Set the track on the detail view controller
             detailViewController.movie = movie
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    /*
+    // MARK: - Navigation
 
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-}
+    */
 
+}

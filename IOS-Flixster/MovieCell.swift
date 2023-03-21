@@ -24,9 +24,9 @@ class MovieCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func configure(with movie: Movie){
-        nameLabel.text = movie.movieName
+        nameLabel.text = movie.title
         overviewLabel.text = movie.overview
-        Nuke.loadImage(with: movie.posterimg, into: posterImage)
+        Nuke.loadImage(with: URL(string: "https://image.tmdb.org/t/p/original"+movie.poster_path)!, into: posterImage)
     }
 
 }
