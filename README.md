@@ -1,22 +1,15 @@
-# Project 3 - *Flixster*
-
-Submitted by: **Khiem Le**
+# Project *Flixster*
 
 **Flixster** is an app that introduces networking into building IOS app, I am using MovieDb API to display information and poster of showing movies. 
 
-Time spent: **2** hours spent in total
 
 ## Required Features
 
-The following **required** functionality is completed:
+The following functionality is **completed**:
 
 - [x] Implement network call and table view to display a list of movies currently playing (title, description, image)
 - [x] App has a collection view with the same list of movies
 - [x] Uses a tab bar controller to switch between collection view and table view screens
- 
-The following **optional** features are implemented:
-
-- [ ] Make an additional network call to another end-point.	
 - [x] Allow users to scroll when context items are off-screen (table view implemention)
 
 ## Video Walkthrough
